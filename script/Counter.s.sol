@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.26;
+pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {PerpVault} from "../src/PerpVault.sol";
+import {Counter} from "../src/Counter.sol";
 
-contract PerpVaultScript is Script {
-    PerpVault public perpVault;
+contract CounterScript is Script {
+    Counter public counter;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        perpVault = new PerpVault();
+        counter = new Counter();
 
         vm.stopBroadcast();
     }
